@@ -1,0 +1,6 @@
+algo=input('Digite algo: ')
+print('Especificações de', algo)
+print('É alfanumerico? ',algo.isalnum())
+print('Está escrito em maiúsculo? ',algo.isupper())
+print('Está escrito em letras minúsculas? ',algo.islower())
+print('É um número? ',algo.isnumeric())
