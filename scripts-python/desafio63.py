@@ -1,8 +1,15 @@
 n1 = int(input('Quantos termos você quer mostrar? '))
 
-c = 0
-termo = 0
+t1 = 0
+t2 = 1
 
-while c <= n1:
-    print(n1)
-    n1 = n1 - 1
+print('{} -> {}'.format(t1, t2), end="")
+cont = 3
+
+while cont <= n1:
+    t3 = t1 + t2
+    print('-> {}'.format(t3),end="")
+    t1 = t2
+    t2 = t3
+    cont += 1
+print('-> FIM')
