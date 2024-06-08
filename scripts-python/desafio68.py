@@ -1,19 +1,37 @@
 import random
-n1 = 0
-n2 = 1
-n3 = 2
-n4 = 3
-n5 = 4
-n6 = 5
-lista = [n1, n2, n3, n4, n5, n6]
-escolhido = random.choice(lista)
+print('-='*10)
+print('JOGO DO PAR OU ÍMPAR')
+print('-='*10)
 
-numero = int(input('Eu acabei de pensar em um numero. Tente adivinhar que número foi esse. Digite aqui: '))
-print('PROCESSANDRO...')
+par = 0
+impar = 0
+soma = 0
+vitorias = 0
 
-if numero == escolhido:
-    print('Parabéns, você adivinhou meu pensamento! Eu pensei em {}'.format(escolhido))
-else:
-    print('Você errou! Eu pensei no número {}. Tente outra vez!'.format(escolhido))
+computador = random.randint(1, 10)
+jogador = int(input('Digite um número: '))
+op = str(input('Você quer [P/I] ?: ')).upper().strip()
 
+soma = computador + jogador
+
+if op == 'P' and soma % 2 == 0:
+        print('Você Venceu!')
+        vitorias += 1
+elif op == 'I' and soma % 2 > 0:
+        print('Você Venceu!')
+        vitorias += 1
+elif op == 'P' and soma % 2 > 0:
+        print('JVocê perdeu!')
+        
+elif op == 'I' and soma % 2 == 0:
+        print('Você Perdeu!')
+
+print('-'*20)
+print(f'Total de vitórias: {vitorias}.')
+print('-'*20)
+print(f'Numero do computador: {computador}.')
+print('-'*20)
+print(f'Total de numeros Par {par}.')
+print('-'*20)
+print(f'Total de numeros impares {impar}.')
 
