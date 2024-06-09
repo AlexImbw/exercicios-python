@@ -10,9 +10,9 @@ vitorias = 0
 derrota = 0
 
 
-computador = random.randint(1, 10)
+computador = random.randint(0, 10)
 jogador = int(input('Digite um número: '))
-op = str(input('Você quer [P/I] ?: ')).upper().strip()
+op = str(input('Você quer [P/I] ?: ')).upper().strip()[0]
 
 soma = computador + jogador
 

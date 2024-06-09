@@ -5,11 +5,11 @@ homens = 0
 op = ''
 while op != 'N': 
     idade = int(input('Digite a idade :'))
-    sexo = str(input('Digite o Sexo. [M/F]')).upper().strip()
+    sexo = str(input('Digite o Sexo. [M/F]')).upper().strip()[0]
     while sexo != 'F' and sexo != 'M':
-        sexo = str(input('Digite o Sexo. [M/F]')).upper().strip()
+        sexo = str(input('Digite o Sexo. [M/F]')).upper().strip()[0]
     qtdCadastro += 1
-    if idade > 18:
+    if idade >= 18:
         maior += 1
     if sexo == 'M':
         homens += 1

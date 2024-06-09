@@ -12,8 +12,9 @@ nomeProduto = str(input('Nome do Produto: '))
 precoProduto = float(input('Preço do Produto: R$'))
 
 expensive = precoProduto
+cheap = nomeProduto
 
-op = str(input('Quer continuar? [S/N]: ')).upper().strip()
+op = str(input('Quer continuar? [S/N]: ')).upper().strip()[0]
 print('-='*20)
 
 while op != 'N':
@@ -28,10 +29,10 @@ while op != 'N':
     if precoProduto < expensive:
         expensive = precoProduto
         cheap = nomeProduto
-    op = str(input('Quer continuar? [S/N]: ')).upper().strip()
+    op = str(input('Quer continuar? [S/N]: ')).upper().strip()[0]
     print('-='*20)
     while op != 'S' and op != 'N':
-        op = str(input('Quer continuar? [S/N]: ')).upper().strip()
+        op = str(input('Quer continuar? [S/N]: ')).upper().strip()[0]
         print('-='*20)
 
 print(f'O valor total da sua compra foi de R${total}.')
